@@ -65,5 +65,4 @@ RSpec was used for testing: run "rspec src/matlab_clone_test.rb"
 7. follow the instructions, it is user-friendly!!! :smile:
 
 <p align="center"><strong>Thank You!!!</strong></p>
-
 <p align="center">Developer: <strong>Jamiu Abdulmujeeb(Emjay)</strong></p>
