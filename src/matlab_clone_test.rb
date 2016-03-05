@@ -4,8 +4,8 @@ CodeClimate::TestReporter.configure do |config|
   #config.git_dir = "https://github.com/sheyooo/andela-project.git" #the relative or absolute location of your git root compared to where your tests are run
   config.git_dir = `git rev-parse --show-toplevel`.strip
 end
-
 CodeClimate::TestReporter.start
+
 
 
 require_relative 'matlab_clone'

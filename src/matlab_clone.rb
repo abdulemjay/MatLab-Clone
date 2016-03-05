@@ -27,8 +27,9 @@ require 'colorize'
         puts "Your Array is: ".yellow
         arr_str.split(" ").collect do |x| @result << " #{x}"
         end
-        print @result.green
         @@data_to_save << "\n#{@@separator}\n#{@result}\n saved at #{Time.new.inspect}.".yellow
+        print @result.green
+        @result.strip
       else
         raise 'Invalid string entered. Please enter a valid string e.g 2 3 4'.red
       end
