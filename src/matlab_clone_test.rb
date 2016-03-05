@@ -1,11 +1,11 @@
-require 'codeclimate-test-reporter'
-CodeClimate::TestReporter.configure do |config|
-  # the root of your Rails application relative to the repository root
-  config.path_prefix = "src"
-  # config.git_dir = "https://github.com/abdulemjay/MatLab-Clone.git" #the relative or absolute location of your git root compared to where your tests are run
-  config.git_dir = `git rev-parse --show-toplevel`.strip
-end
-CodeClimate::TestReporter.start
+# require 'codeclimate-test-reporter'
+# CodeClimate::TestReporter.configure do |config|
+#   # the root of your Rails application relative to the repository root
+#   config.path_prefix = "src"
+#   # config.git_dir = "https://github.com/abdulemjay/MatLab-Clone.git" #the relative or absolute location of your git root compared to where your tests are run
+#   config.git_dir = `git rev-parse --show-toplevel`.strip
+# end
+# CodeClimate::TestReporter.start
 
 
 
@@ -65,7 +65,7 @@ RSpec.describe "MatLab Clone" do
       expect(caller.vector_zeros('3','5')).to eq "0 0 0 0 0\n\t 0 0 0 0 0\n\t 0 0 0 0 0"
     end
 
-     it 'should return error for non-digit input for rows' do
+    it 'should return error for non-digit input for rows' do
       expect {caller.vector_zeros('r','5')}.to raise_error 'Invalid number. Number of rows/columns invalid '.red
     end
 
@@ -116,17 +116,15 @@ RSpec.describe "MatLab Clone" do
 
 
   context 'method save_data' do
-    it 'should check for if file exist' do
+    it 'should check for if file exist and append' do
       expect(caller.save_output("save testfile.mat")).to eq nil
-      #expect {caller.save_output("save testfile.mat")}.to change {caller.save_output("save testfile.mat")}.from(4).to(3)
     end
 
-    it 'should check for if file exist' do
+    it 'should check for if file exist, if not, create a new file' do
       expect(caller.save_output("save testfileff.mat")).to eq nil
-      #expect {caller.save_output("save testfile.mat")}.to change {caller.save_output("save testfile.mat")}.from(4).to(3)
     end
 
-    it 'should check for incorrect command format' do
+    it 'should check for incorrect save command format' do
       expect {caller.save_output('save new.ma')}.to raise_error 'Please save using this command: save filename.mat'.red
     end
 
@@ -137,17 +135,15 @@ RSpec.describe "MatLab Clone" do
 
 
   context 'method load_data' do
-    it 'should check for if file exist' do
+    it 'should check for if file exist and load it' do
       expect(caller.load_data("load testfile.mat")).to eq nil
-      #expect {caller.save_output("save testfile.mat")}.to change {caller.save_output("save testfile.mat")}.from(4).to(3)
     end
 
-    it 'should check for if file exist' do
+    it 'should check for if file exist and flag error' do
       expect(caller.load_data("load testfileff.mat")).to eq nil
-      #expect {caller.save_output("save testfile.mat")}.to change {caller.save_output("save testfile.mat")}.from(4).to(3)
     end
 
-    it 'should check for incorrect command format' do
+    it 'should check for incorrect load command format' do
       expect {caller.load_data('load new.ma')}.to raise_error 'Please load_data using this command: load_data filename.mat'.red
     end
 
