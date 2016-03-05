@@ -32,7 +32,7 @@ while menu
       mat_str = gets.chomp
       caller.mat_create(mat_str)
 
-    when "3" then
+    when "3"
       puts "How many rows?".yellow
       rows = gets.chomp
       puts "How many columns?".yellow
