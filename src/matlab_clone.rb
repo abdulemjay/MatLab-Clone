@@ -86,6 +86,7 @@ require 'colorize'
           puts "\t#{@total}".green
         end
         @@data_to_save << "\n#{@@separator}\n#{@result}\n saved at #{Time.new.inspect}.".yellow
+        @result.strip
       else
         raise 'Invalid matrix or number. Please try again'.red
       end
@@ -96,10 +97,10 @@ require 'colorize'
     def mat_transpose(mat_str)
       @result=""
       puts "The Transpose of your Matrix is: \t".yellow
-      col_length = mat_str.split(';').length
-      for col in 0...col_length
+      row_length = mat_str.split(';').length
+      for col in 0..row_length
         @total = ""
-        for row in 0...col_length
+        for row in 0...row_length
           @total << mat_str.split(';')[row].split(' ')[col] + ' '
           row += 1
         end
@@ -108,6 +109,7 @@ require 'colorize'
         col += 1
       end
       @@data_to_save << "\n#{@@separator}\n#{@result}\n saved at #{Time.new.inspect}.".yellow
+      @result.strip
     end
 
 
@@ -120,9 +122,10 @@ require 'colorize'
       m = mat_str.split(';')[1].split(' ')[0].to_i
       n = mat_str.split(';')[1].split(' ')[1].to_i
       det = (k * n) - (l * m)
-      @result << "\t#{k / det.to_f}\t#{-1 * m / det.to_f}\n\t#{-1 * l / det.to_f}\t#{n / det.to_f}"
+      @result << "\t#{(k / det.to_f).round(2)}\t#{(-1 * m / det.to_f).round(2)}\n\t#{(-1 * l / det.to_f).round(2)}\t#{(n / det.to_f).round(2)}"
       print @result.green
       @@data_to_save << "\n#{@@separator}\n#{@result}\n saved at #{Time.new.inspect}.".yellow
+      @result.strip
     end
 
 
@@ -133,7 +136,7 @@ require 'colorize'
       elsif operator==";"
         ver_concat(mat_str1, mat_str2)
       else
-        puts "Matrix cannot be concatenated, please use the right operator"
+        raise "Matrix cannot be concatenated, please use the right operator".red
       end
     end
 
@@ -148,6 +151,7 @@ require 'colorize'
         @result << "#{@total}\n"
       end
       @@data_to_save << "\n#{@@separator}\n#{@result}\n saved at #{Time.new.inspect}.".yellow
+      @result.strip
     end
 
 
@@ -163,6 +167,7 @@ require 'colorize'
       @result << @total
       @@data_to_save << "\n#{@@separator}\n#{@result}\n saved at #{Time.new.inspect}.".yellow
       puts @result.green
+      @result.strip
     end
 
 
