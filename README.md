@@ -16,7 +16,7 @@
 RSpec was used for testing: run "rspec src/matlab_clone_test.rb"
 
 <br><br>
-<h2 align="center">MatLabClone v1.0 </h2>
+<h2 align="center">MatLabClone v1.1 </h2>
 <p align="center">MatLab Clone - A Ruby Console Application to Perform Array and Matrix Operations and save us from the stress of downloading and installing the bulky matlab setup file from mathworks.</p>
 <p>&nbsp;</p>
 <p><strong><span style="text-decoration: underline;">Functionalities:</span></strong></p>
