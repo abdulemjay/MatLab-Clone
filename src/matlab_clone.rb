@@ -184,7 +184,7 @@ require 'colorize'
           puts "The data has been saved".yellow
         end
       else
-        puts 'Please save using this command: save filename.mat'.red
+        raise 'Please save using this command: save filename.mat'.red
       end
     end
 
