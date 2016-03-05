@@ -16,7 +16,7 @@
 RSpec was used for testing: run "rspec src/matlab_clone_test.rb"
 
 <br><br>
-<h2 align="center">MatLabClone v1.0 </h2>
+<h2 align="center">MatLabClone v1.1 </h2>
 <p align="center">MatLab Clone - A Ruby Console Application to Perform Array and Matrix Operations and save us from the stress of downloading and installing the bulky matlab setup file from mathworks.</p>
 <p>&nbsp;</p>
 <p><strong><span style="text-decoration: underline;">Functionalities:</span></strong></p>
@@ -56,7 +56,7 @@ RSpec was used for testing: run "rspec src/matlab_clone_test.rb"
 <p><strong><span style="text-decoration: underline;">Instructions:</span></strong></p>
 
 
-1. Download the repository via https://github.com/abdulemjay/MatLab-Clone
+1. Download the repository via https://github.com/abdulemjay/matlab-clone
 2. place the downloaded zip file on your desktop.
 3. right click and select "Extract to MatLab-Clone-master\".
 4. open the command prompt and type "cd Desktop\MatLab-Clone-master" to navigate to the directory.
