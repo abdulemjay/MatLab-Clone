@@ -17,7 +17,7 @@ require 'colorize'
 
     # class variables
     @@data_to_save=""
-    @@separator="\n\n-------------this is a new data----------------------------".yellow
+    @@separator="\n\n--------------------this is a new data----------------------------".yellow
 
 
     #defined methods in the specification
