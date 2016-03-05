@@ -56,7 +56,7 @@ RSpec was used for testing: run "rspec src/matlab_clone_test.rb"
 <p><strong><span style="text-decoration: underline;">Instructions:</span></strong></p>
 
 
-1. Download the repository via https://github.com/abdulemjay/MatLab-Clone
+1. Download the repository via https://github.com/abdulemjay/matlab-clone
 2. place the downloaded zip file on your desktop.
 3. right click and select "Extract to MatLab-Clone-master\".
 4. open the command prompt and type "cd Desktop\MatLab-Clone-master" to navigate to the directory.
