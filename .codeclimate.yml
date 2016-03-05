@@ -35,7 +35,7 @@ index e69de29..3f1d222 100644
 +AllCops:
 +  DisabledByDefault: true
 +
-+#################### Lint ################################
++##################### Lint ################################
 +
 +Lint/AmbiguousOperator:
 +  Description: >-
