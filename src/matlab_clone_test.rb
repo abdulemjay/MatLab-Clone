@@ -15,6 +15,10 @@ RSpec.describe "MatLab Clone" do
 
     context 'method arr_create' do
 
+      it 'should return an the right array' do
+        expect(caller.arr_create("1 2 3 4")).to eq "1 2 3 4"
+      end
+
       it 'should return error for string array' do
         expect {caller.arr_create('d e h')}.to raise_error 'Invalid string entered. Please enter a valid string e.g 2 3 4'.red
       end
@@ -30,11 +34,14 @@ RSpec.describe "MatLab Clone" do
       it 'should return error for wrong array input' do
         expect {caller.arr_create('2 3 4;5 6 7')}.to raise_error 'Invalid string entered. Please enter a valid string e.g 2 3 4'.red
       end
-      
-      it 'should return an the right array' do
-        expect(caller.arr_create("1 2 3 4")).to eq "1 2 3 4"
-      end
+    end
 
+
+    context "mat_create method" do 
+                   
+      it "should return the matrix input" do
+        expect(caller.mat_create("1 2;3 4")).to eq "1 2\n\t3 4"
+      end
     end
 
 
@@ -55,8 +62,12 @@ RSpec.describe "MatLab Clone" do
       it 'should return error for non-digit input for colums' do
         expect {caller.vector_zeros('5','e')}.to raise_error 'Invalid number. Number of rows/columns invalid '.red
       end
-    
+
+      it 'should return the vector zeros' do
+        expect(caller.vector_zeros('3','5')).to eq "0 0 0 0 0\n\t 0 0 0 0 0\n\t 0 0 0 0 0"
+      end
     end
+
 
     context 'method load_data' do  
             
@@ -74,8 +85,7 @@ RSpec.describe "MatLab Clone" do
 
       it 'should return error for non-digit input for colums' do
         expect {caller.vector_zeros('5','e')}.to raise_error 'Invalid number. Number of rows/columns invalid '.red
-      end
-    
+      end    
     end
 
 end

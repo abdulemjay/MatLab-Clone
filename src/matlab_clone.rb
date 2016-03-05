@@ -44,6 +44,7 @@ require 'colorize'
         mat_str.split(';').each { |x| @result << "\t#{x}\n" }
         print @result.green
         @@data_to_save << "\n#{@@separator}\n#{@result}\n saved at #{Time.new.inspect}.".yellow
+        @result.strip
       end
     end
 
@@ -66,6 +67,7 @@ require 'colorize'
           @result << "#{zero_mat}\n"
         end
         @@data_to_save << "\n#{@@separator}\n#{@result}\n saved at #{Time.new.inspect}.".yellow
+        @result.strip
       end
     end
 
