@@ -5,7 +5,10 @@
 
 <a href="https://codeclimate.com/github/abdulemjay/MatLab-Clone"><img src="https://codeclimate.com/github/abdulemjay/MatLab-Clone/badges/gpa.svg" />
 <img src="https://codeclimate.com/github/abdulemjay/MatLab-Clone/badges/issue_count.svg" />
-<a href="https://codeclimate.com/github/abdulemjay/MatLab-Clone/coverage"><img src="https://codeclimate.com/github/abdulemjay/MatLab-Clone/badges/coverage.svg" /></a>
+<a href="https://codeclimate.com/github/abdulemjay/MatLab-Clone/coverage"><img src="https://codeclimate.com/github/abdulemjay/MatLab-Clone/badges/coverage.svg" />
+<a href="https://travis-ci.org/abdulemjay/matlab-clone"><img src="https://travis-ci.org/abdulemjay/matlab-clone.svg?branch=master">
+<a href='https://semaphoreci.com/abdulemjay/matlab-clone'> <img src='https://semaphoreci.com/api/v1/abdulemjay/matlab-clone/branches/master/shields_badge.svg' alt='Build Status'>
+</a>
 
 <br>
 
