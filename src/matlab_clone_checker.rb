@@ -1,5 +1,3 @@
-
-
 # Regular expression confirmations
   def digit_confirm(num)
     if /^\d+$/ =~ num
