@@ -32,10 +32,10 @@ while menu
       mat_str = gets.chomp
       caller.mat_create(mat_str)
 
-    when "3"
-      puts "Please enter the number of rows".yellow
+    when "3" then
+      puts "How many rows?".yellow
       rows = gets.chomp
-      puts "Please enter the number of columns".yellow
+      puts "How many columns?".yellow
       cols = gets.chomp
       caller.vector_zeros(rows, cols)
 

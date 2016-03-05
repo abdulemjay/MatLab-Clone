@@ -1,11 +1,11 @@
-# require 'codeclimate-test-reporter'
-# CodeClimate::TestReporter.configure do |config|
-#   # the root of your Rails application relative to the repository root
-#   config.path_prefix = "src"
-#   # config.git_dir = "https://github.com/abdulemjay/MatLab-Clone.git" #the relative or absolute location of your git root compared to where your tests are run
-#   config.git_dir = `git rev-parse --show-toplevel`.strip
-# end
-# CodeClimate::TestReporter.start
+require 'codeclimate-test-reporter'
+CodeClimate::TestReporter.configure do |config|
+  # the root of your Rails application relative to the repository root
+  config.path_prefix = "src"
+  # config.git_dir = "https://github.com/abdulemjay/MatLab-Clone.git" #the relative or absolute location of your git root compared to where your tests are run
+  config.git_dir = `git rev-parse --show-toplevel`.strip
+end
+CodeClimate::TestReporter.start
 
 
 
