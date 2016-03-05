@@ -78,7 +78,7 @@ while menu
 
     when "10"
       puts "Good bye!!!"
-        menu = false
+      menu = false
 
     else
       puts puts "Please enter a valid number between 1 and 9 to select an option from the menu".yellow
@@ -86,5 +86,3 @@ while menu
   end
 
 end
-
-# end
