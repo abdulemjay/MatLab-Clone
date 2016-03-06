@@ -116,9 +116,9 @@ RSpec.describe "MatLab Clone" do
 
 
   context 'method save_data' do
-    it 'should check for if file exist and append' do
-      expect(caller.save_output("save testfile.mat")).to eq nil
-    end
+    # it 'should check for if file exist and append' do
+    #   expect(caller.save_output("save testfile.mat")).to eq nil
+    # end
 
     it 'should check for if file exist, if not, create a new file' do
       expect(caller.save_output("save testfileff.mat")).to eq nil
@@ -139,9 +139,9 @@ RSpec.describe "MatLab Clone" do
       expect(caller.load_data("load testfile.mat")).to eq nil
     end
 
-    it 'should check for if file exist and flag error' do
-      expect(caller.load_data("load testfileff.mat")).to eq nil
-    end
+    # it 'should check for if file exist and flag error' do
+    #   expect(caller.load_data("load testfileff.mat")).to eq nil
+    # end
 
     it 'should check for incorrect load command format' do
       expect {caller.load_data('load new.ma')}.to raise_error 'Please load_data using this command: load_data filename.mat'.red
