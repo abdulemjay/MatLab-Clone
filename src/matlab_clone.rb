@@ -197,7 +197,7 @@ require 'colorize'
           data = new_file.read
           puts data.to_s.green
         else
-          raise 'File does not exist'.red
+          puts 'File does not exist'.red
         end
       else
         raise 'Please load_data using this command: load_data filename.mat'.red
