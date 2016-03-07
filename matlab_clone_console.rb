@@ -37,7 +37,8 @@ while menu
       rows = gets.chomp
       puts "How many columns?".yellow
       cols = gets.chomp
-      caller.vector_zeros(rows, cols)
+      dim = rows, cols
+      caller.vector_zeros(dim)
 
     when "4"
       puts 'Please enter the matrix in this format: "1 2 3;4 5 6;7 8 9"'.yellow
