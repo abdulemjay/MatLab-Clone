@@ -135,9 +135,9 @@ RSpec.describe "MatLab Clone" do
 
 
   context 'method load_data' do
-    it 'should check for if file exist and load it' do
-      expect(caller.load_data("load testfile.mat")).to eq nil
-    end
+    # it 'should check for if file exist and load it' do
+    #   expect(caller.load_data("load testfile.mat")).to eq nil
+    # end
 
     # it 'should check for if file exist and flag error' do
     #   expect(caller.load_data("load testfileff.mat")).to eq nil
