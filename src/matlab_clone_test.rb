@@ -1,11 +1,11 @@
-require 'codeclimate-test-reporter'
-CodeClimate::TestReporter.configure do |config|
-  # the root of your Rails application relative to the repository root
-  config.path_prefix = "src"
-  # config.git_dir = "https://github.com/abdulemjay/MatLab-Clone.git" #the relative or absolute location of your git root compared to where your tests are run
-  config.git_dir = `git rev-parse --show-toplevel`.strip
-end
-CodeClimate::TestReporter.start
+# require 'codeclimate-test-reporter'
+# CodeClimate::TestReporter.configure do |config|
+#   # the root of your Rails application relative to the repository root
+#   config.path_prefix = "src"
+#   # config.git_dir = "https://github.com/abdulemjay/MatLab-Clone.git" #the relative or absolute location of your git root compared to where your tests are run
+#   config.git_dir = `git rev-parse --show-toplevel`.strip
+# end
+# CodeClimate::TestReporter.start
 
 
 
@@ -118,7 +118,6 @@ RSpec.describe "MatLab Clone" do
   context 'method save_data' do
     it 'should check for if file exist and append' do
       save_command="save testfile.mat"
-      #expect(caller.save_output(save_command.gsub("save ", "save "))).to eq nil
       expect {caller.save_output(save_command)}.to change {save_command}.from("save testfile.mat").to("testfile.mat")
     end
 
@@ -142,11 +141,12 @@ RSpec.describe "MatLab Clone" do
 
   context 'method load_data' do
     it 'should check for if file exist and load it' do
-      expect(caller.load_data("load testfile.mat")).to eq nil
+      load_command="load testfile.mat"
+      expect {caller.load_data(load_command)}.to change {load_command}.from("load testfile.mat").to("testfile.mat")
     end
 
     it 'should check for if file exist and flag error' do
-      expect(caller.load_data("load testfileff.mat")).to eq nil
+      expect(caller.load_data("load testfilefff.mat")).to eq nil
     end
 
     it 'should check for incorrect load command format' do
