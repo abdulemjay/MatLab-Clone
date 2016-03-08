@@ -57,12 +57,12 @@ RSpec was used for testing: run "rspec src/matlab_clone_test.rb"
 
 
 1. Download the repository via https://github.com/abdulemjay/matlab-clone
-2. place the downloaded zip file on your desktop.
-3. right click and select "Extract to MatLab-Clone-master\".
-4. open the command prompt and type "cd Desktop\MatLab-Clone-master" to navigate to the directory.
+2. Place the downloaded zip file on your desktop.
+3. Right click and select "Extract to MatLab-Clone-master\".
+4. Open the command prompt and type "cd Desktop\MatLab-Clone-master" to navigate to the directory.
 5. Type "bundle install" on the command prompt to install the required gems.
-6. finally type "ruby matlab_clone_console.rb" to open the application.
-7. follow the instructions, it is user-friendly!!! :smile:
+6. Finally type "ruby matlab_clone_console.rb" to open the application.
+7. Follow the instructions from the command line. Don't be afraid, it's user-friendly!!! :smile:
 
 <p align="center"><strong>Thank You!!!</strong></p>
 <p align="center">Developer: <strong>Jamiu Abdulmujeeb(Emjay)</strong></p>
