@@ -16,7 +16,7 @@ RSpec.describe "MatLab Clone" do
 
   context 'method arr_create' do
     it 'should return an the right array' do
-      expect(caller.arr_create("1 2 3 4")).to eq "1 2 3 4"
+      expect(caller.arr_create("1 2 3 4")).to eq [1, 2, 3, 4]
     end
 
     it 'should return error for string array' do
