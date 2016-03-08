@@ -117,11 +117,6 @@ RSpec.describe "MatLab Clone" do
 
   context 'method save_data' do
     it 'should check for if file exist and append' do
-      save_command="save testfile.mat"
-      expect {caller.save_output(save_command)}.to change {save_command}.from("save testfile.mat").to("testfile.mat")
-    end
-
-    it 'should check for if file exist and append' do
       expect(caller.save_output("save testfile.mat")).to eq nil
     end
 
@@ -136,12 +131,17 @@ RSpec.describe "MatLab Clone" do
     it 'should check for incorrect command format' do
       expect {caller.save_output('savenew.ma')}.to raise_error 'Please save using this command: save filename.mat'.red
     end
+
+    it 'should check for if file exist and append' do
+      save_command="save testfile.mat"
+      expect {caller.save_output(save_command)}.to change {save_command}.from("save testfile.mat").to("testfile.mat")
+    end
   end
 
 
   context 'method load_data' do
+    load_command="load testfile.mat"
     it 'should check for if file exist and load it' do
-      load_command="load testfile.mat"
       expect {caller.load_data(load_command)}.to change {load_command}.from("load testfile.mat").to("testfile.mat")
     end
 
