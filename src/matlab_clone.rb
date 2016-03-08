@@ -10,33 +10,33 @@ require 'colorize'
 
   class MatLabClone
 
-    #the constructor
+    #  constructor
     def initialize
     end
 
 
-    # class variables
+    # class variable to save hold daata output from the program
     @@data_to_save=""
+    # to separate each of the data to be saved
     @@separator="\n\n--------------------this is a new data----------------------------".yellow
 
 
-    #defined methods in the specification
+    # method to create an array
     def arr_create(arr_str)
-      @result=""
+      @result=[]
       if array_confirm(arr_str) == true
         puts "Your Array is: ".yellow
-        arr_str.split(" ").collect do |x| @result << " #{x}"
-        end
+        @result = arr_str.strip.split.map {|x| x.to_i}
         @@data_to_save << "\n#{@@separator}\n#{@result}\n saved at #{Time.new.inspect}.".yellow
-        print @result.green
-        @result.strip
+        print @result.to_s.green
+        @result
       else
         raise 'Invalid string entered. Please enter a valid string e.g 2 3 4'.red
       end
     end
 
 
-
+    # method to create a matrix
     def mat_create(mat_str)
       @result=""
       if mat_str.include? ";"
@@ -49,7 +49,7 @@ require 'colorize'
     end
 
     
-
+    # method to create zero vectors
     def vector_zeros(rows,cols)
       @result=""
       if digit_confirm(rows) == false || digit_confirm(cols) == false
@@ -72,7 +72,7 @@ require 'colorize'
     end
 
 
-
+    # method to add a number to an array
     def mat_add(mat_str, number)
       if digit_confirm(number) == true
         puts "The New Array is: \t".yellow
@@ -93,7 +93,7 @@ require 'colorize'
     end
 
 
-
+    # method to compute trasnpose of a matrix
     def mat_transpose(mat_str)
       @result=""
       puts "The Transpose of your Matrix is: \t".yellow
@@ -113,7 +113,7 @@ require 'colorize'
     end
 
 
-
+    # method to compute inverse of a matrix
     def mat_inverse(mat_str)
       @result=""
       puts "The New matrix is: ".yellow
@@ -129,6 +129,7 @@ require 'colorize'
     end
 
 
+    # method to determine type of concatenation.
     def mat_concat(mat_str1, mat_str2, operator)
       @result=""
       if operator==","
@@ -141,6 +142,7 @@ require 'colorize'
     end
 
 
+    # method to compute horizontal concatenation of two matrices
     def hor_concat(mat_str1, mat_str2)
       puts "The New Array is: ".yellow
       lent = mat_str1.split(";").length
@@ -155,6 +157,7 @@ require 'colorize'
     end
 
 
+    # method to compute vertical concatenation of two matrices
     def ver_concat(mat_str1, mat_str2)
       puts "The New Array is: ".yellow
       @total = ""
@@ -171,6 +174,7 @@ require 'colorize'
     end
 
 
+    # method to save data from the console output to a file
     def save_output(save_command)
       if /^save (\w+).mat$/ =~ save_command
         if File.exist?(save_command.gsub!('save ', ''))
@@ -189,7 +193,7 @@ require 'colorize'
     end
 
 
-
+    # method to load data from a saved file
     def load_data(load_command)
       if /^load (\w+).mat$/ =~ load_command
         if File.exist?(load_command.gsub!('load ', ''))
