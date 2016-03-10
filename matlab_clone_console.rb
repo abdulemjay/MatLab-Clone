@@ -17,7 +17,7 @@ while menu
   puts "..................................Press 7 - To concatenate two matrices....................................".yellow
   puts "............................Press 8 - To save data output from your operation..............................".yellow
   puts "...............................Press 9 - To load data from your saved files................................".yellow
-  puts "...............................Press 10 - To load data from your saved files...............................".yellow
+  puts "....................................Press 10 - To exit the application.....................................".yellow
 
   choice = gets.chomp
   case choice
