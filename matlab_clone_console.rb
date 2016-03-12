@@ -84,5 +84,6 @@ while menu
     else
       puts puts "Please enter a valid number between 1 and 9 to select an option from the menu".yellow
 
+
   end
 end
