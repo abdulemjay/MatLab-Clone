@@ -7,7 +7,6 @@
     end
   end
 
-
   def array_confirm(array)
     if /^\d+(\s\d+)*$/ =~ array
       true
